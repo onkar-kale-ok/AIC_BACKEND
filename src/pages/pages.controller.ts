@@ -14,7 +14,7 @@ export class PagesController {
 
   @Get()
   findAll() {
-    return this.pagesService.findAll();
+    return this.pagesService.getAllPages();
   }
 
   @Get(':id')
