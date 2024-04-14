@@ -7,6 +7,11 @@ dotenv.config();
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.enableCors(
+    { 
+      methods: ['POST', 'PUT', 'DELETE', 'GET']
+    }
+  );
   app.useGlobalPipes(new ValidationPipe()); // To ensure the protection of endpoints to receiving incorrect data.
   /**swagger implimentation */
   const options = new DocumentBuilder()
