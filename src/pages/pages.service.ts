@@ -19,7 +19,7 @@ export class PagesService {
     const result = await this.pageRepository.find();
     return {
       statusCode: 200,
-      message: 'User list',
+      message: 'Page list',
       users: result,
     };
   }
